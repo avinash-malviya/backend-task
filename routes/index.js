@@ -14,7 +14,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/login',loginController.addUser);
+router.post('/register',loginController.addUser);
+router.get('/login',loginController.login)
+router.get('/restrictedpage',loginController.restrictedPage);
+
 
 router.post('/state',stateController.createState);
 router.get('/state',stateController.getState);
