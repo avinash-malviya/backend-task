@@ -14,8 +14,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/login',loginController.createLogin);
-router.get('/login',loginController.getLogin);
+router.post('/login',loginController.addUser);
 
 router.post('/state',stateController.createState);
 router.get('/state',stateController.getState);
